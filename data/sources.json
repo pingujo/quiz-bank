@@ -972,7 +972,7 @@
   "subject": null,
   "kind": "Google 雲端硬碟",
   "official_exam": false,
-  "url": "https://drive.google.com/drive/u/0/folders/0B-2YnWjsnzalMm84ck9yRUtPTG8",
+  "url": "https://drive.google.com/drive/folders/0B-2YnWjsnzalMm84ck9yRUtPTG8",
   "page_title": "段考考題 - Google 雲端硬碟",
   "status": "ok",
   "checked": "2026-11-22",
@@ -1394,11 +1394,11 @@
   "subject": null,
   "kind": "學校網站",
   "official_exam": false,
-  "url": "https://old.thps.tyc.edu.tw/modules/tad_uploader/index.php?of_cat_sn=81",
-  "page_title": "",
-  "status": "unstable",
+  "url": "https://www.thps.tyc.edu.tw/modules/school/index.php?department_id=2&zone_id=0&page_id=21&category_id=16&parent_id=0&type=files",
+  "page_title": "桃園市蘆竹區大華國小 - 教務處檔案下載",
+  "status": "ok",
   "checked": "2026-11-22",
-  "via": "tcool.cc",
+  "via": "tcool.cc+逐校掃描",
   "homepage": false
  },
  {
@@ -1604,12 +1604,12 @@
   "subject": null,
   "kind": "學校網站",
   "official_exam": false,
-  "url": "https://www.grps.tn.edu.tw/",
-  "page_title": "台南市歸仁區歸仁國小全球資訊網 - 歡迎光臨",
+  "url": "https://drive.google.com/drive/folders/1YYDsrDkuAX2Ce4ANAiiWrbKsAQNYE8CT?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
+  "page_title": "歷屆試題評量卷分享 - Google 雲端硬碟",
   "status": "ok",
   "checked": "2026-11-22",
-  "via": "exambank.darrenlu.com",
-  "homepage": true
+  "via": "exambank.darrenlu.com+逐校掃描",
+  "homepage": false
  },
  {
   "level": "國小",
@@ -1632,12 +1632,12 @@
   "subject": null,
   "kind": "學校網站",
   "official_exam": false,
-  "url": "https://www.kfps.ilc.edu.tw/",
-  "page_title": "宜蘭縣宜蘭市光復國民小學",
+  "url": "https://drive.google.com/drive/folders/0BwcCQ-Klw1yqVzhybjRhclNncm8",
+  "page_title": "歷年評量試題 - Google 雲端硬碟",
   "status": "ok",
   "checked": "2026-11-22",
-  "via": "exambank.darrenlu.com",
-  "homepage": true
+  "via": "exambank.darrenlu.com+逐校掃描",
+  "homepage": false
  },
  {
   "level": "國小",
@@ -1758,12 +1758,12 @@
   "subject": null,
   "kind": "學校網站",
   "official_exam": false,
-  "url": "https://www.ccjh.ntpc.edu.tw/",
-  "page_title": "新北市立重慶國民中學",
+  "url": "https://drive.google.com/drive/folders/1_9NmeTZeiY0GvrSjo5knWvAaUfzsE9kh",
+  "page_title": "段考試題 - Google 雲端硬碟",
   "status": "ok",
   "checked": "2026-11-22",
-  "via": "exambank.darrenlu.com",
-  "homepage": true
+  "via": "exambank.darrenlu.com+逐校掃描",
+  "homepage": false
  },
  {
   "level": "國中",
@@ -1772,12 +1772,12 @@
   "subject": null,
   "kind": "學校網站",
   "official_exam": false,
-  "url": "https://www.yljh.ntpc.edu.tw/",
-  "page_title": "首頁 - 新北市立育林國中",
+  "url": "https://drive.google.com/drive/folders/1ZbiVyrUKexAvaIdZbSk-Jvn9cLoB3CGM?usp=sharing",
+  "page_title": "歷次段考試題 - Google 雲端硬碟",
   "status": "ok",
   "checked": "2026-11-22",
-  "via": "exambank.darrenlu.com",
-  "homepage": true
+  "via": "exambank.darrenlu.com+逐校掃描",
+  "homepage": false
  },
  {
   "level": "國中",
@@ -1856,12 +1856,12 @@
   "subject": null,
   "kind": "學校網站",
   "official_exam": false,
-  "url": "https://www.chjh.tyc.edu.tw/",
-  "page_title": "卓越創新-桃園市立青溪國民中學",
+  "url": "https://drive.google.com/drive/folders/1SCJCi3bCNZq7OzcPwJtUgJH9qNFXWcUZ?usp=sharing",
+  "page_title": "歷屆定期考試題 - Google 雲端硬碟",
   "status": "ok",
   "checked": "2026-11-22",
-  "via": "exambank.darrenlu.com",
-  "homepage": true
+  "via": "exambank.darrenlu.com+逐校掃描",
+  "homepage": false
  },
  {
   "level": "國中",
@@ -1954,12 +1954,12 @@
   "subject": null,
   "kind": "學校網站",
   "official_exam": false,
-  "url": "https://dhjh.tc.edu.tw/",
-  "page_title": "臺中市立大華國民中學",
+  "url": "https://drive.google.com/drive/folders/1-tsvXgbmG2n-7eFTLjl8TpStjK_OSt7J?usp=sharing",
+  "page_title": "歷屆段考試題 - Google 雲端硬碟",
   "status": "ok",
   "checked": "2026-11-22",
-  "via": "exambank.darrenlu.com",
-  "homepage": true
+  "via": "exambank.darrenlu.com+逐校掃描",
+  "homepage": false
  },
  {
   "level": "國中",
@@ -1968,12 +1968,12 @@
   "subject": null,
   "kind": "學校網站",
   "official_exam": false,
-  "url": "https://bsjh.tc.edu.tw/",
-  "page_title": "臺中市立北勢國民中學",
+  "url": "https://drive.google.com/drive/folders/1VJl7isI9-QXP5L4s0MOEfz_2EfjVIIkm",
+  "page_title": "12-段考試題 - Google 雲端硬碟",
   "status": "ok",
   "checked": "2026-11-22",
-  "via": "exambank.darrenlu.com",
-  "homepage": true
+  "via": "exambank.darrenlu.com+逐校掃描",
+  "homepage": false
  },
  {
   "level": "國中",
@@ -1996,12 +1996,12 @@
   "subject": null,
   "kind": "學校網站",
   "official_exam": false,
-  "url": "https://kmjh.tc.edu.tw/",
-  "page_title": "臺中市立光明國民中學",
+  "url": "https://drive.google.com/drive/folders/1GtDWaM-GeRDJCt1Dv3kh2QG-X6MA8nPL?usp=drive_link",
+  "page_title": "710_04段考題目 - Google 雲端硬碟",
   "status": "ok",
   "checked": "2026-11-22",
-  "via": "exambank.darrenlu.com",
-  "homepage": true
+  "via": "exambank.darrenlu.com+逐校掃描",
+  "homepage": false
  },
  {
   "level": "國中",
@@ -2024,12 +2024,12 @@
   "subject": null,
   "kind": "學校網站",
   "official_exam": false,
-  "url": "https://tajh.tc.edu.tw/",
-  "page_title": "臺中市立大安國民中學",
+  "url": "https://drive.google.com/drive/folders/1AUeHV5iDu5TknXQQj_Z8M1SZ_UXvoqFm?usp=sharing",
+  "page_title": "段考試題與解答參考 - Google 雲端硬碟",
   "status": "ok",
   "checked": "2026-11-22",
-  "via": "exambank.darrenlu.com",
-  "homepage": true
+  "via": "exambank.darrenlu.com+逐校掃描",
+  "homepage": false
  },
  {
   "level": "國中",
@@ -2318,12 +2318,12 @@
   "subject": null,
   "kind": "學校網站",
   "official_exam": false,
-  "url": "https://www.ryjh.ilc.edu.tw/",
-  "page_title": "宜蘭縣內城國民中小學",
+  "url": "https://drive.google.com/drive/folders/1k1_c5hebr8RsSehpDlyWQCRSD92Vz3RU?usp=sharing",
+  "page_title": "歷屆段考試題 - Google 雲端硬碟",
   "status": "ok",
   "checked": "2026-11-22",
   "via": "exambank.darrenlu.com",
-  "homepage": true
+  "homepage": false
  },
  {
   "level": "國中",
@@ -2844,7 +2844,7 @@
   "subject": null,
   "kind": "Google 雲端硬碟",
   "official_exam": false,
-  "url": "https://drive.google.com/drive/u/1/folders/1_lmSIikyYvix_DgDDUnUGX4MeCvqg0jU",
+  "url": "https://drive.google.com/drive/folders/1_lmSIikyYvix_DgDDUnUGX4MeCvqg0jU",
   "page_title": "補考題庫 - Google 雲端硬碟",
   "status": "ok",
   "checked": "2026-11-22",
