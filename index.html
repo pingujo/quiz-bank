@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>考古題入口｜各校官方段考試題總整理</title>
+<style>
+  :root{
+    --bg:#eef1f6; --card:#fff; --ink:#1d2433; --muted:#6b7385; --line:#e3e7ef;
+    --pri:#ff6b35; --pri-d:#d9531f; --sec:#2f6fed; --sec-d:#1f55c4;
+    --ok:#18a06b; --warn:#c98a00; --bad:#e0435a; --field:#f1f3f8;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;}
+  .wrap{max-width:560px;margin:24px auto 40px;padding:0 12px}
+  .card{background:var(--card);border-radius:26px;padding:26px 24px;box-shadow:0 6px 24px rgba(30,40,70,.06)}
+  header{margin-bottom:16px}
+  h1{font-size:26px;margin:0;letter-spacing:1px}
+  h1 small{display:block;font-size:13px;color:var(--muted);font-weight:500;letter-spacing:0;margin-top:4px}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px}
+  .stat{border-radius:12px;padding:10px 12px;border:1px solid}
+  .stat span{font-size:12px;color:var(--muted)}
+  .stat b{display:block;font-size:22px;margin-top:2px}
+  .stat.a{background:#fff3ec;border-color:#ffd2bd;color:var(--pri-d)}
+  .stat.b{background:#edf3ff;border-color:#c9dafd;color:var(--sec-d)}
+  .stat.c{background:#e9f7f0;border-color:#bfe6d3;color:var(--ok)}
+  .quick{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px}
+  .quick a{display:block;text-decoration:none;color:#fff;border-radius:10px;padding:12px;font-weight:700;font-size:15px}
+  .quick a small{display:block;font-weight:400;font-size:12px;opacity:.9;margin-top:2px}
+  .quick .q1{background:var(--pri);box-shadow:0 4px 0 var(--pri-d)}
+  .quick .q2{background:var(--sec);box-shadow:0 4px 0 var(--sec-d)}
+  .tabs{display:flex;gap:6px;margin-bottom:10px}
+  .tabs button{flex:1;border:0;background:var(--field);border-radius:8px;padding:9px;font-size:14px;font-weight:700;cursor:pointer;color:var(--muted)}
+  .tabs button.on{background:var(--ink);color:#fff}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}
+  select,input{border:0;background:var(--field);border-radius:8px;padding:9px 10px;font-size:14px;width:100%;font-family:inherit}
+  select{appearance:none;cursor:pointer;padding-right:28px;
+    background:var(--field) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23333' fill='none' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 10px center}
+  .chk{font-size:13px;color:var(--muted);display:flex;gap:14px;margin:4px 2px 12px}
+  .chk label{display:flex;align-items:center;gap:4px;cursor:pointer}
+  .res-head{font-size:13px;color:var(--muted);margin:6px 0 8px;display:flex;justify-content:space-between}
+  .city{font-size:13px;font-weight:700;color:var(--muted);margin:14px 2px 6px;border-bottom:1px solid var(--line);padding-bottom:4px}
+  .item{display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-bottom:6px;text-decoration:none;color:inherit;transition:border-color .15s,background .15s}
+  a.item:hover{border-color:var(--sec);background:#f7f9ff}
+  .item .main{flex:1;min-width:0}
+  .item h3{font-size:15px;margin:0 0 3px}
+  .item .sub{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
+  .tag{font-size:11px;background:var(--field);border-radius:4px;padding:2px 6px;color:var(--muted)}
+  .tag.subj{background:#edf3ff;color:var(--sec-d)}
+  .tag.warn{background:#fff6dc;color:var(--warn)}
+  .tag.bad{background:#fdecef;color:var(--bad)}
+  .star{border:0;background:none;font-size:20px;cursor:pointer;color:#c9ced8;padding:4px}
+  .star.on{color:#ffb400}
+  .go{font-size:18px;color:var(--muted)}
+  .item.dead{opacity:.55}
+  .empty{text-align:center;color:var(--muted);font-size:14px;padding:24px}
+  .note{font-size:12px;color:var(--muted);line-height:1.6;background:var(--field);border-radius:10px;padding:10px 12px;margin-top:18px}
+  footer{text-align:center;font-size:12px;color:var(--muted);margin-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <header>
+      <h1>考古題入口<small>各校官方公開的段考試題，一頁找齊・無廣告・不追蹤</small></h1>
+    </header>
+
+    <div class="stats">
+      <div class="stat a"><span>收錄學校</span><b id="sSchools">0</b></div>
+      <div class="stat b"><span>涵蓋縣市</span><b id="sCities">0</b></div>
+      <div class="stat c"><span>連結檢查</span><b id="sChecked">-</b></div>
+    </div>
+
+    <div class="quick" id="quick"></div>
+
+    <div class="tabs" id="tabs">
+      <button data-v="國小">國小</button>
+      <button data-v="國中" class="on">國中</button>
+      <button data-v="高中">高中</button>
+      <button data-v="★">★ 收藏</button>
+    </div>
+    <div class="row">
+      <select id="city"></select>
+      <select id="kind"></select>
+    </div>
+    <input id="q" type="search" placeholder="搜尋學校名稱，例如：永和、五福、數學">
+    <div class="chk">
+      <label><input type="checkbox" id="hideBad" checked style="width:auto">隱藏失效連結</label>
+    </div>
+
+    <div class="res-head"><span id="count"></span><span id="sortNote">依縣市排列</span></div>
+    <div id="list"></div>
+
+    <div class="note">
+      本頁只整理<strong>各校自己公開</strong>的考古題頁面連結，點下去會直接到學校官網或學校的雲端硬碟下載，本站不轉存任何試卷。<br>
+      ⚠️ 標「需登入」「連線不穩」的連結是檢查時打不開或需要帳號，可能是暫時性問題。<br>
+      🏫 <strong>私立國中入學考</strong>：目前查到的私中幾乎都<strong>不公開官方入學考題</strong>（例如台中市 15 所私中已取消紙筆入學考、改採多元入學；延平等校只公布招生簡章）。網路上的「私中考古題」多為補習班整理或回憶版本，因此本站不收錄。若之後找到學校官方公開的頁面會再補上。<br>
+      📚 學校清單來源：tcool.cc、exambank.darrenlu.com 公開整理的連結，每筆都經過連線檢查。<br>
+      收藏只存在你自己的瀏覽器裡。
+    </div>
+  </div>
+  <footer>資料最後檢查：<span id="lastCheck">-</span></footer>
+</div>
+
+<script src="data/sources.js"></script>
+<script>
+const ALL = window.SOURCES || [];
+const STATUS = {
+  ok:      null,
+  unstable:{cls:'warn', t:'連線不穩'},
+  login:   {cls:'warn', t:'需登入'},
+  broken:  {cls:'bad',  t:'連結失效'},
+};
+let favs; try { favs = new Set(JSON.parse(localStorage.getItem('qb-favs') || '[]')); } catch (e) { favs = new Set(); }
+const saveFavs = () => { try { localStorage.setItem('qb-favs', JSON.stringify([...favs])); } catch (e) {} };
+let level = '國中';
+
+/* 統計 */
+const schools = ALL.filter(x => !x.official_exam);
+document.getElementById('sSchools').textContent = schools.length;
+document.getElementById('sCities').textContent = new Set(schools.map(x => x.city)).size;
+const okN = ALL.filter(x => x.status === 'ok').length;
+document.getElementById('sChecked').textContent = `${okN}/${ALL.length}`;
+document.getElementById('lastCheck').textContent = ALL.map(x => x.checked).sort().pop() || '-';
+
+/* 會考、學測官方試題快捷 */
+const ORG = {'國中會考':'心測中心','高中學測':'大考中心','統測':'技專校院入學測驗中心','國教署':'教育部國教署','學習扶助':'教育部・國小國中適用'};
+document.getElementById('quick').innerHTML = ALL.filter(x => x.official_exam).map((x, i) =>
+  `<a class="q${i < 2 ? 1 : 2}" href="${x.url}" target="_blank" rel="noopener noreferrer">
+     ${x.label} 歷屆試題<small>${ORG[x.label] || '官方'}・官方公開</small></a>`).join('');
+
+/* 篩選選單 */
+const fill = (id, label, values) => {
+  document.getElementById(id).innerHTML =
+    `<option value="">${label}</option>` + values.map(v => `<option>${v}</option>`).join('');
+};
+const CITY_ORDER = ['基隆市','臺北市','新北市','桃園市','新竹市','新竹縣','苗栗縣','臺中市','彰化縣','南投縣','雲林縣',
+  '嘉義市','嘉義縣','臺南市','高雄市','屏東縣','宜蘭縣','花蓮縣','臺東縣','澎湖縣','金門縣','連江縣'];
+const cityIdx = c => { const i = CITY_ORDER.indexOf(c); return i < 0 ? 99 : i; };
+function refreshCityOptions(){
+  const pool = schools.filter(x => level === '★' ? favs.has(x.url) : x.level === level);
+  const cur = document.getElementById('city').value;
+  const cities = [...new Set(pool.map(x => x.city))].sort((a,b) => cityIdx(a) - cityIdx(b));
+  fill('city', '全部縣市', cities.map(c => `${c}`));
+  if (cities.includes(cur)) document.getElementById('city').value = cur;
+}
+fill('kind', '全部來源', [...new Set(schools.map(x => x.kind))]);
+
+/* 清單 */
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function render(){
+  const city = document.getElementById('city').value;
+  const kind = document.getElementById('kind').value;
+  const q = document.getElementById('q').value.trim();
+  const hideBad = document.getElementById('hideBad').checked;
+  const rows = schools.filter(x =>
+    (level === '★' ? favs.has(x.url) : x.level === level) &&
+    (!city || x.city === city) && (!kind || x.kind === kind) &&
+    (!hideBad || x.status !== 'broken') &&
+    (!q || (x.city + x.school + (x.subject || '') + x.page_title).includes(q))
+  ).sort((a,b) => cityIdx(a.city) - cityIdx(b.city) || a.school.localeCompare(b.school, 'zh-Hant'));
+
+  document.getElementById('count').textContent = `共 ${rows.length} 個來源`;
+  if (!rows.length){
+    document.getElementById('list').innerHTML = `<div class="empty">${level === '★' ? '還沒有收藏，點學校右邊的 ☆ 加入' : '找不到符合的學校'}</div>`;
+    return;
+  }
+  let html = '', lastCity = '';
+  for (const x of rows){
+    if (x.city !== lastCity){ html += `<div class="city">${esc(x.city)}</div>`; lastCity = x.city; }
+    const st = STATUS[x.status];
+    const name = x.school + (x.subject ? `（${x.subject}科）` : '') + (level === '★' ? `・${x.level}` : '');
+    html += `
+      <div class="item ${x.status === 'broken' ? 'dead' : ''}">
+        <a class="main" href="${esc(x.url)}" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit">
+          <h3>${esc(name)}</h3>
+          <div class="sub">${esc(x.page_title || '')}</div>
+          <div class="tags">
+            <span class="tag">${esc(x.kind)}</span>
+            ${x.subject ? `<span class="tag subj">只有${esc(x.subject)}科</span>` : ''}
+            ${x.homepage ? `<span class="tag warn">只連到學校首頁，需自行找考題區</span>` : ''}
+            ${x.single_file ? `<span class="tag">單一檔案</span>` : ''}
+            ${x.private ? `<span class="tag subj">私立</span>` : ''}
+            ${st ? `<span class="tag ${st.cls}">${st.t}</span>` : ''}
+          </div>
+        </a>
+        <button class="star ${favs.has(x.url) ? 'on' : ''}" data-u="${esc(x.url)}" title="收藏">${favs.has(x.url) ? '★' : '☆'}</button>
+      </div>`;
+  }
+  document.getElementById('list').innerHTML = html;
+}
+
+document.getElementById('tabs').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  level = b.dataset.v;
+  document.querySelectorAll('#tabs button').forEach(x => x.classList.toggle('on', x === b));
+  refreshCityOptions(); render();
+});
+document.getElementById('list').addEventListener('click', e => {
+  const b = e.target.closest('.star'); if (!b) return;
+  const u = b.dataset.u; favs.has(u) ? favs.delete(u) : favs.add(u); saveFavs(); render();
+});
+['city','kind','hideBad'].forEach(id => document.getElementById(id).addEventListener('change', render));
+document.getElementById('q').addEventListener('input', render);
+
+refreshCityOptions(); render();
+</script>
+</body>
+</html>
